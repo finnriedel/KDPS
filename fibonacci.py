@@ -10,7 +10,7 @@ def fibonacci_rec(n):
 	else:
 		return 0
 
-print(fibonacci_rec(nummer))
+#print(fibonacci_rec(nummer))
 #for i in range(0, nummer+1):
 #	print(fibonacci_rec(i))
 
@@ -23,6 +23,7 @@ def fibonacci_it(n):
 	elif n == 1:
 		return 1
 
+	gerade = 0
 	n_1 = 0
 	n_2 = 1
 	for i in range(2, n+1):
@@ -30,6 +31,8 @@ def fibonacci_it(n):
 		n_1 = n_2
 		n_2 = temp + n_2
 		print(n_2)
+		if(n_2 % 2 == 0):
+			gerade = gerade + n_2
+	print("Summer der geraden Zahlen:",gerade)
 
 fibonacci_it(nummer)
-
